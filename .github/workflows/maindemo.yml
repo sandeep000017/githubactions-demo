@@ -1,8 +1,11 @@
 name: hello-world
-on: push
+on:
+  push:       # runs on any push to any branch
+  workflow_dispatch:  # lets you run it manually from the Actions tab
+
 jobs:
   learning:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
+      - name: Print Hello
         run: echo "Hello World!"
